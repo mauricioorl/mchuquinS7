@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="semana7.Vistas.ingreso"
+             Title="ingreso">
+    <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto" Padding="20" RowSpacing="5">
+        <VerticalStackLayout>
+            <Label Grid.Row="0" 
+                           Text="Agregar Usuario" 
+                           Margin="0,0,0,18"  
+                   FontSize="24"
+                           TextColor="DarkBlue" 
+                           HorizontalTextAlignment="Center"/>
+  
+                <Entry 
+                    x:Name="txtNombres"
+                    Placeholder="Nombres:"
+                    Grid.Row="2"
+                    HeightRequest="50"/>
+
+                <Entry 
+                    x:Name="txtApellidos"
+                    Grid.Row="3"
+                    Placeholder="Apellidos:"
+                    HeightRequest="50"/>
+
+                <Entry 
+                    x:Name="txtDireccion"
+                    Grid.Row="4"
+                    Placeholder="Dirección:"
+                    HeightRequest="50"/>
+           
+
+                <Entry 
+                     x:Name="txtTelefono"
+                     Grid.Row="5"
+                     Placeholder="Teléfono:"
+                     HeightRequest="50"/>
+
+
+                <Entry 
+                    x:Name="txtEmail"
+                    Grid.Row="6"
+                    Placeholder="Email:"
+                    HeightRequest="50"/>
+          
+ 
+                <Entry 
+                    x:Name="txtContrasena"
+                    Grid.Row="7"
+                    Placeholder="Contraseña:"
+                    HeightRequest="50"/>
+          
+            <Button Grid.Row="12" 
+                        x:Name="btnRegistro"
+                        Text="Agregar" 
+                        FontAttributes="Bold" 
+                        TextColor="White" 
+                        Margin="0,20" 
+                        HeightRequest="50" 
+                        CornerRadius="10" 
+                        BackgroundColor="DarkBlue"
+                        WidthRequest="150"
+                    Clicked="btnRegistro_Clicked"
+                            />
+
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

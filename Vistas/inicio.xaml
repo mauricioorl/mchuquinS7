@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="semana7.Vistas.inicio"
+             Title="inicio">
+    <StackLayout Padding="20">
+        <Label 
+            Text="Listado de Empleados"
+            FontSize="20"
+            HorizontalTextAlignment="Center"/>
+
+        <Grid>
+
+            <ListView x:Name="listaEstudiantes" ItemSelected="listaEstudiantes_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Row="0" Grid.Column="0" Text="COD" FontSize="12" Margin="0,0,0,10"/>
+                                <Label Grid.Row="0" Grid.Column="1" Text="NOMBRE" FontSize="12" Margin="10,0,0,10"/>
+                                <Label Grid.Row="0" Grid.Column="2" Text="APELLIDO" FontSize="12" Margin="10,0,0,10"/>
+                                <Label Grid.Row="0" Grid.Column="3" Text="DIRECCIÓN" FontSize="12" Margin="10,0,0,10"/>
+                                <Label Grid.Row="0" Grid.Column="4" Text="TELÉFONO" FontSize="12" Margin="10,0,0,10"/>
+                                <Label Grid.Row="0" Grid.Column="5" Text="EMAIL" FontSize="12" Margin="10,0,0,10"/>
+
+                                <Label Grid.Row="1" Grid.Column="0" x:Name="lblCodigo" Text="{Binding codigo}" Margin="0,0,0,10" FontSize="10"/>
+                                <Label Grid.Row="1" Grid.Column="1" x:Name="lblNombre2" Text="{Binding nombre}" Margin="0,0,0,10" FontSize="10"/>
+                                <Label Grid.Row="1" Grid.Column="2" x:Name="lblApellido" Text="{Binding apellido}" Margin="0,0,0,10" FontSize="10"/>
+                                <Label Grid.Row="1" Grid.Column="3" x:Name="lblDireccion" Text="{Binding direccion}" Margin="0,0,0,10" FontSize="10"/>
+                                <Label Grid.Row="1" Grid.Column="4" x:Name="lblTelefono" Text="{Binding telefono}" Margin="0,0,0,10" FontSize="10"/>
+                                <Label Grid.Row="1" Grid.Column="5" x:Name="lblEmail" Text="{Binding email}" Margin="0,0,0,10" FontSize="10"/>
+                                <Label Grid.Row="1" Grid.Column="6" x:Name="lblContrasena" Text="{Binding contrasena}" Margin="0,0,0,10" FontSize="10"/>
+
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+        </Grid>
+        <Button         x:Name="btnIngreso"
+                        Text="Agregar Usuario" 
+                        FontAttributes="Bold" 
+                        TextColor="White" 
+                        Margin="0,20" 
+                        HeightRequest="50" 
+                        CornerRadius="10" 
+                        BackgroundColor="DarkBlue"
+                        WidthRequest="150"
+                        Clicked="btnIngreso_Clicked"
+                            />
+
+    </StackLayout>
+</ContentPage>
