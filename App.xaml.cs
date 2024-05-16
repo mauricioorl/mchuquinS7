@@ -8,6 +8,8 @@
 
             MainPage = new AppShell();
             MainPage = new NavigationPage(new Vistas.inicio());
+
+            
         }
     }
 }
